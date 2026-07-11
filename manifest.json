@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "FUM College Muter",
+  "version": "1.0",
+  "description": "Automatically finds and deletes messages containing 'کالج' on the Pooya portal to remove spam.",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://pooya.um.ac.ir/gateway/SPuyaLeft.php*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "world": "MAIN"
+    }
+  ],
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
